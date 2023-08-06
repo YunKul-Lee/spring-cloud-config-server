@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: jake-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${git.url}
+          clone-on-start: true
+          username: ${username}
+          password: ${password}
+          default-label: main
+#          default-label: master
+          skip-ssl-validation: true
+
+
